@@ -484,6 +484,30 @@ p {
   padding-bottom: 30px;
 }
 
+.animateBar {
+  animation-name: animateBar;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.9s;
+}
+@keyframes animateBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.progress-bar {
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.barColor {
+  background: linear-gradient(to left, #660033 0%, #ff0066 100%);
+}
+
 
 /*technology end*/
 

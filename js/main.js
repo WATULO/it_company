@@ -43,6 +43,33 @@ const galleryLightbox = GLightbox({
 });
 //initiate gallery light box end
 
+//technology start
+$(document).ready(function () {
+  var targetParent = $(".progress");
+  targetParent.each(function () {
+    //required variables
+    var target = $(this).children();
+    var offsetTop = $(this).offset().top;
+    var winHeight = $(window).height();
+    // var data_width = target.attr("aria-valuenow") + "%";
+
+    //animation starts
+    if (winHeight > offsetTop) {
+      target.addClass("animateBar");
+    }
+
+    //animation with scroll
+    $(window).scroll(function () {
+      var scrollBar = $(this).scrollTop();
+      var animateStart = offsetTop - winHeight;
+      if (scrollBar > animateStart) {
+        target.addClass("animateBar");
+      }
+    });
+  });
+});
+//technology end
+
 
 
 
